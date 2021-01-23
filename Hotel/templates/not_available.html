@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h4>SORRY NO ROOM AVAILABLE</h4>
+    <h4>From : <b> {{ in_date }} </b> To : <b> {{ out_date }} </b> </h4>
+    <h4>Please check another Dates</h4>
+    <p>
+      <a  type="submit"  href={% url "index" %}><button class="btn btn-danger">Back</button></a>
+    </p>
+{% endblock %}

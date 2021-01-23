@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+  <h3>The List Of Booked Rooms Are: </h3>
+    <p>
+    <ol>
+    {% for i in details %}
+        <li>
+           <h4> Room No : <b>{{ i.room_no }} </b>  Name : <b>{{ i.customer_name }}</b> From : <b>{{ i.checkin_date }}</b> To : <b>{{ i.checkout_date }} </b></h4>
+        </li>
+    {% endfor %}
+    </ol>
+    </p>
+    <p> <a  type="submit"  href={% url "index" %}><button class="btn btn-danger">Back</button></a></p>
+{% endblock %}

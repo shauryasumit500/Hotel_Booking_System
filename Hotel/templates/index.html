@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+
+    <form method="post" >
+            {% csrf_token %}
+            <P>
+                <label for="Name">Name: </label>
+                <input id="Name" type="text" name="Name">
+            </P>
+            <P>
+                <label for="Start_Date">From: </label>
+                <input id="Start_Date" type="date" name="Start_Date">
+                <label for="End_Date">To: </label>
+                <input id="End_Date" type="date" name="End_Date">
+            </P>
+            <P>
+                <input type="submit" value="Book" class="btn btn-primary">
+            </P>
+        </form>
+{% endblock %}
